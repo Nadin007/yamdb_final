@@ -1,3 +1,5 @@
+![yamdb_workflow](https://github.com/Nadin007/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 # О проекте YaMDbet
 
 Проект YaMDbet собирает отзывы пользователей о различных произведениях искусства.
