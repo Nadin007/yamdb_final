@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Create .env file
         run: |
-        cat << EOF > .env
+          cat << EOF > .env
           DB_ENGINE=django.db.backends.postgresql
           DB_NAME=postgres
           POSTGRES_USER=${{secrets.POSTGRES_USER}}
@@ -44,6 +44,7 @@ jobs:
           DB_PORT=5432
           SECRET_KEY=${{secrets.SECRET_KEY}}
           EOF
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Login to Docker 
