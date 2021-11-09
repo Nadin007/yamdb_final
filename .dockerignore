@@ -1,0 +1,12 @@
+# Ignore everything
+**
+
+# Allowed
+!api_yamdb
+!api
+!reviews
+!templates
+!manage.py
+!requirements.txt
+!README.md
+!static
