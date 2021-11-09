@@ -1,40 +1,23 @@
-from django.core.mail import EmailMessage
-from django.db.models import Avg, ExpressionWrapper, Func, fields, Q
-from django.http import JsonResponse
-from rest_framework import (
-    filters,
-    generics,
-    mixins,
-    pagination,
-    permissions,
-    response,
-    status,
-    views,
-    viewsets,
-)
-from rest_framework.decorators import action
-from rest_framework_simplejwt.tokens import RefreshToken
-from reviews.models import Category, Genre, Review, Title, User
-from reviews.tokens import account_activation_token
 from smtplib import SMTPException
 
+from django.core.mail import EmailMessage
+from django.db.models import Avg, ExpressionWrapper, Func, Q, fields
+from django.http import JsonResponse
+from rest_framework import (filters, generics, mixins, pagination, permissions,
+                            response, status, views, viewsets)
+from rest_framework.decorators import action
+from rest_framework_simplejwt.tokens import RefreshToken
+
 from api.filters import TitleFilter
-from api.permissions import (
-    IsAdmin,
-    IsAdminOrReadOnly,
-    OwnerAdminModeratorOrReadOnly,
-)
-from api.serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    ConfirmationTokenSerializer,
-    GenreSerializer,
-    ReadTitleSerializer,
-    RegistrationSerializer,
-    ReviewSerializer,
-    UserSerializer,
-    WriteTitleSerializer,
-)
+from api.permissions import (IsAdmin, IsAdminOrReadOnly,
+                             OwnerAdminModeratorOrReadOnly)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             ConfirmationTokenSerializer, GenreSerializer,
+                             ReadTitleSerializer, RegistrationSerializer,
+                             ReviewSerializer, UserSerializer,
+                             WriteTitleSerializer)
+from reviews.models import Category, Genre, Review, Title, User
+from reviews.tokens import account_activation_token
 
 
 class ConfirmationViewSet(views.APIView):
