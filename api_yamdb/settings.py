@@ -1,6 +1,6 @@
 import os
-from distutils.util import strtobool
 from datetime import timedelta
+from distutils.util import strtobool
 
 import dotenv
 
