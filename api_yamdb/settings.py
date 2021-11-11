@@ -1,4 +1,5 @@
 import os
+from distutils.util import strtobool
 from datetime import timedelta
 
 import dotenv
@@ -10,7 +11,7 @@ if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 SECRET_KEY = os.environ.get('SECRET_KEY', default="SUP3R-S3CR3T-K3Y-F0R-MY-PR0J3CT")
 
-DEBUG = False
+DEBUG = bool(strtobool(os.getenv('DEBUG', 'False')))
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
@@ -88,7 +89,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "ru"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/New_York"
 
 USE_I18N = True
 
