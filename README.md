@@ -152,7 +152,7 @@ MIT
    [Docker]: <https://docs.docker.com/get-docker/>
    [Nadin007/yamdb_final]: https://github.com/Nadin007/yamdb_final
    
-Проект доступен по адресу: http://84.201.155.92/api/v1/
+Проект доступен по адресу: https://yatube-shareland.tk/api/v1/
 
 Автор:
 Тумарева Надежда
